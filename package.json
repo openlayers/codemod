@@ -1,0 +1,20 @@
+{
+  "name": "@openlayers/codemod",
+  "version": "0.0.0",
+  "private": false,
+  "bin": "./codemod.js",
+  "scripts": {
+    "lint": "eslint eslint.config.mjs codemod.js src",
+    "test": "npm run lint"
+  },
+  "description": "Applies code modifications to assist with upgrades",
+  "devDependencies": {
+    "eslint": "^9.16.0",
+    "eslint-config-openlayers": "^20.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "jscodeshift": "^0.16.1",
+    "jscodeshift-add-imports": "^1.0.11"
+  }
+}
