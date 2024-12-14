@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": false,
   "bin": "./codemod.js",
+  "files": [
+    "./codemod.js",
+    "src"
+  ],
   "scripts": {
     "lint": "eslint eslint.config.mjs codemod.js src",
     "pretest": "npm run lint",
@@ -10,7 +14,7 @@
   },
   "description": "Applies code modifications to assist with upgrades",
   "devDependencies": {
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "eslint-config-openlayers": "^20.0.0",
     "vitest": "^2.1.8"
   },
