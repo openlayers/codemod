@@ -8,12 +8,12 @@ Rewrite imports from ["barrel files"](https://www.google.com/search?q=barrel+fil
 
 ```bash
 # rewrite imports in all .js and .mjs files in the path/to/files directory
-npx @openlayers/codemod replace-barrel-imports path/to/files
+npx @openlayers/codemod@latest replace-barrel-imports path/to/files
 ```
 
 See additional options with the `help` command (or `--help` flag).
 
 ```bash
 # see options for the command
-npx @openlayers/codemod help replace-barrel-imports
+npx @openlayers/codemod@latest help replace-barrel-imports
 ```
