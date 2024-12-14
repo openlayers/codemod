@@ -5,12 +5,14 @@
   "bin": "./codemod.js",
   "scripts": {
     "lint": "eslint eslint.config.mjs codemod.js src",
-    "test": "npm run lint"
+    "pretest": "npm run lint",
+    "test": "vitest --run"
   },
   "description": "Applies code modifications to assist with upgrades",
   "devDependencies": {
     "eslint": "^9.16.0",
-    "eslint-config-openlayers": "^20.0.0"
+    "eslint-config-openlayers": "^20.0.0",
+    "vitest": "^2.1.8"
   },
   "dependencies": {
     "commander": "^12.1.0",
