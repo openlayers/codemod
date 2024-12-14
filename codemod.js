@@ -28,7 +28,11 @@ program
   )
   .action(async (src, _, cmd) => {
     const options = cmd.optsWithGlobals();
-    const replaceBarrelImports = path.resolve('src/replace-barrel-imports.js');
+    const replaceBarrelImports = path.resolve(
+      __dirname,
+      `./src/${cmd.name()}.js`,
+    );
+
     await jscodeshift(replaceBarrelImports, [src], options);
   });
 
