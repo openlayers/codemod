@@ -1,5 +1,6 @@
 {
   "name": "@openlayers/codemod",
+  "description": "Applies code modifications to assist with upgrades",
   "version": "0.1.2",
   "private": false,
   "bin": "./codemod.js",
@@ -12,7 +13,13 @@
     "pretest": "npm run lint",
     "test": "vitest --run"
   },
-  "description": "Applies code modifications to assist with upgrades",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/openlayers/codemod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openlayers/codemod/issues"
+  },
   "devDependencies": {
     "eslint": "^9.17.0",
     "eslint-config-openlayers": "^20.0.0",
