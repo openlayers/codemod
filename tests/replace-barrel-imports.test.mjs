@@ -99,6 +99,31 @@ const cases = [
   `,
   },
   {
+    name: 'handle partial barrel file',
+    options: {considerRelativePaths: true},
+    input: `
+      import {createXYZ, TileGrid} from '../src/ol/tilegrid.js';
+  `,
+    output: `
+      import TileGrid from '../src/ol/tilegrid/TileGrid.js';
+      import {createXYZ} from '../src/ol/tilegrid.js';
+  `,
+  },
+  {
+    name: 'handle multiple partial barrel files',
+    options: {considerRelativePaths: true},
+    input: `
+      import {get as getProjection} from '../src/ol/proj.js';
+      import {createXYZ, TileGrid, WMTS} from '../src/ol/tilegrid.js';
+  `,
+    output: `
+      import {get as getProjection} from '../src/ol/proj.js';
+      import TileGrid from '../src/ol/tilegrid/TileGrid.js';
+      import WMTS from '../src/ol/tilegrid/WMTS.js';
+      import {createXYZ} from '../src/ol/tilegrid.js';
+  `,
+  },
+  {
     name: 'named imports',
     options: {considerRelativePaths: false},
     input: `
@@ -122,6 +147,11 @@ for (const c of cases) {
       {jscodeshift},
       c.options,
     );
+
+    if (!output) {
+      expect(dedent(c.input)).toBe(dedent(c.output));
+      return;
+    }
 
     const o = await format(output);
     expect(o).toBe(dedent(c.output));

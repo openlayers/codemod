@@ -229,6 +229,11 @@ function replaceBarrelImports(fileInfo, api, {considerRelativePaths}) {
           barrelFiles[barrelPath],
         );
         if (!declaration) {
+          // not a barrel import, leave as is
+          if (!(importPath in importDeclarations)) {
+            importDeclarations[importPath] = [];
+          }
+          importDeclarations[importPath].push(specifier);
           continue;
         }
 
