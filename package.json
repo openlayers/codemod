@@ -26,7 +26,7 @@
     "vitest": "^3.0.2"
   },
   "dependencies": {
-    "commander": "^13.0.0",
+    "commander": "^14.0.0",
     "jscodeshift": "^0.16.1",
     "jscodeshift-add-imports": "^1.0.11"
   }
