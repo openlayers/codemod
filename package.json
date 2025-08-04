@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "commander": "^14.0.0",
-    "jscodeshift": "^0.16.1",
+    "jscodeshift": "^17.3.0",
     "jscodeshift-add-imports": "^1.0.11"
   }
 }
