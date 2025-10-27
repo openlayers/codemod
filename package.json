@@ -23,7 +23,7 @@
   "devDependencies": {
     "eslint": "^9.17.0",
     "eslint-config-openlayers": "^20.0.0",
-    "vitest": "^3.0.2"
+    "vitest": "^4.0.4"
   },
   "dependencies": {
     "commander": "^14.0.0",
