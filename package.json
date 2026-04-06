@@ -21,7 +21,7 @@
     "url": "https://github.com/openlayers/codemod/issues"
   },
   "devDependencies": {
-    "eslint": "^9.17.0",
+    "eslint": "^10.2.0",
     "eslint-config-openlayers": "^20.0.0",
     "vitest": "^4.0.4"
   },
