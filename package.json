@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "eslint": "^9.17.0",
-    "eslint-config-openlayers": "^20.0.0",
+    "eslint-config-openlayers": "^21.0.0",
     "vitest": "^4.0.4"
   },
   "dependencies": {
